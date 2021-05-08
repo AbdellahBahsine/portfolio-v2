@@ -1,0 +1,71 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Assistant", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: "Space Mono", monospace;
+  font-size: 32px;
+  font-weight: 400;
+}
+.title span {
+  color: #518071;
+}
+
+.button {
+  width: 160px;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  cursor: pointer;
+}
+.button.primary {
+  background: #518071;
+  color: #fff;
+  border: none;
+}
+.button.secondary {
+  border: 1px solid #518071;
+  color: #518071;
+}
+
+header {
+  background: #2F4858;
+  height: 70px;
+}
+header .header__inner {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav__link {
+  font-family: "Assistant", sans-serif;
+  font-weight: 300;
+  margin-left: 25px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+nav .nav__link:hover {
+  color: #518071;
+  transition: 0.8s;
+}
+
+/*# sourceMappingURL=main.css.map */

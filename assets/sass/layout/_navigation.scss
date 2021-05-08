@@ -1,0 +1,16 @@
+nav{
+    
+    .nav__link{
+        font-family: $assistant-font;
+        font-weight: 300;
+        margin-left: 25px;
+        color: $white-color;
+        font-size: 20px;
+        text-transform: uppercase;
+
+        &:hover{
+            color: $primary-color;
+            transition: 0.8s;
+        }
+    }
+}

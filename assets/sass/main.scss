@@ -1,3 +1,8 @@
+@import './utils/functions';
+@import './utils/helpers';
+@import './utils/mixins';
+@import './utils/variables';
+
 @import './base/reset';
 @import './base/typography';
 
@@ -10,8 +15,3 @@
 
 @import './pages/home';
 @import './pages/work';
-
-@import './utils/functions';
-@import './utils/helpers';
-@import './utils/mixins';
-@import './utils/variables';

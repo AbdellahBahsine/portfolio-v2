@@ -1,0 +1,19 @@
+.button{
+    width: 160px;
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: none;
+    cursor: pointer;
+
+    &.primary{
+        background: $primary-color;
+        color: $white-color;
+        border: none;
+    }
+
+    &.secondary{
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+}

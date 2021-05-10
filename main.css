@@ -61,6 +61,38 @@ body {
   grid-gap: 20px;
 }
 
+form {
+  width: 70%;
+  display: grid;
+  grid-template-areas: "column-1 column-2" "column-3 column-3" "column-4 column-4";
+  grid-gap: 20px;
+  margin-top: 35px;
+}
+form #name, form #email {
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #dddcdc;
+  outline: none;
+}
+form #name {
+  grid-area: column-1;
+}
+form #email {
+  grid-area: column-2;
+}
+form #message {
+  grid-area: column-3;
+  height: 160px;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #dddcdc;
+  outline: none;
+}
+form #submit {
+  grid-area: column-4;
+  margin-left: auto;
+}
+
 header {
   position: relative;
   z-index: 3;

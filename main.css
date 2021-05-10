@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 1px;
+  color: #222;
 }
 
 .title {
@@ -37,9 +38,27 @@ body {
   color: #fff;
   border: none;
 }
+.button.primary:hover {
+  background: #3f6459;
+  transition: 0.6s;
+}
 .button.secondary {
   border: 1px solid #518071;
   color: #518071;
+  background: transparent;
+}
+.button.secondary:hover {
+  background: #518071;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: 0.6s;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
 }
 
 header {
@@ -60,23 +79,19 @@ header .header__inner .bars {
   position: relative;
   width: 30px;
   height: 22px;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
 }
+@media screen and (max-width: 630px) {
+  header .header__inner .bars {
+    display: flex;
+  }
+}
 header .header__inner .bars:hover .bars__container .bar {
   background: #518071;
   transition: 0.6s;
-}
-header .header__inner .bars .bars__container {
-  display: none;
-  cursor: pointer;
-}
-@media screen and (max-width: 630px) {
-  header .header__inner .bars .bars__container {
-    display: flex;
-  }
 }
 header .header__inner .bars .bars__container.open .bar:nth-child(1) {
   transform: rotate(45deg);
@@ -131,7 +146,7 @@ header .header__inner .bars .bars__container .bar:nth-child(3) {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: #253a47;
+  background: #1d2d36;
   padding-top: 40px;
 }
 .mobile-menu.open {
@@ -149,6 +164,126 @@ header .header__inner .bars .bars__container .bar:nth-child(3) {
 .mobile-menu .nav__link:hover {
   color: #518071;
   transition: 0.8s;
+}
+
+main .about .about__inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .about .about__inner .about__title {
+  margin-top: 60px;
+}
+main .about .about__inner .about__title::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+main .about .about__inner .picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 25px 0;
+  overflow: hidden;
+}
+main .about .about__inner .picture img {
+  margin-left: -5%;
+  height: 100%;
+  width: auto;
+}
+main .about .about__inner .socials {
+  margin-bottom: 25px;
+}
+main .about .about__inner .socials .social {
+  font-size: 18px;
+  color: #2F4858;
+  margin: 0 12px;
+}
+main .about .about__inner .socials .social:hover {
+  color: #518071;
+  transition: 0.6s;
+}
+main .about .about__inner .about__text {
+  font-size: 20px;
+  text-align: center;
+  width: 75%;
+  opacity: 0.9;
+}
+main .about .about__inner .about__text span {
+  text-decoration: underline;
+}
+main .work {
+  background: #ededed;
+  margin-top: 60px;
+  padding: 60px 0;
+}
+main .work .work__inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .work .work__inner .cards {
+  margin: 35px 0;
+}
+main .work .work__inner .cards .card {
+  background: red;
+  height: 350px;
+}
+main .blogs {
+  padding: 60px 0;
+}
+main .blogs .blogs__inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .blogs .blogs__inner .cards {
+  margin: 35px 0;
+}
+main .blogs .blogs__inner .cards .card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: auto;
+}
+main .blogs .blogs__inner .cards .card .card__image {
+  width: 100%;
+  height: 250px;
+}
+main .blogs .blogs__inner .cards .card .card__image img {
+  width: 100%;
+}
+main .blogs .blogs__inner .cards .card .card__content {
+  padding: 25px 15px;
+}
+main .blogs .blogs__inner .cards .card .card__content .card__title {
+  color: #518071;
+}
+main .blogs .blogs__inner .cards .card .card__content .card__text {
+  margin: 15px 0;
+  word-break: break-all;
+}
+main .contact {
+  padding: 60px 0;
+  background: #ededed;
+}
+main .contact .contact__inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

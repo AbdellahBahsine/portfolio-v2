@@ -16,10 +16,14 @@ header{
             position: relative;
             width: 30px;
             height: 22px;
-            display: flex;
+            display: none;
             justify-content: flex-start;
             align-items: center;
             cursor: pointer;
+
+            @media screen and (max-width: 630px){
+                display: flex;
+            }
 
             &:hover .bars__container .bar{
                 background: $primary-color;
@@ -27,12 +31,6 @@ header{
             }
 
             .bars__container{
-                display: none;
-                cursor: pointer;
-    
-                @media screen and (max-width: 630px){
-                    display: flex;
-                }
     
                 &.open .bar:nth-child(1){
                     transform: rotate(45deg);

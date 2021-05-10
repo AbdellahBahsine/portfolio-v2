@@ -1,4 +1,6 @@
 header{
+    position: relative;
+    z-index: 3;
     background: $secondary-color;
     height: 70px;
 
@@ -9,5 +11,59 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .bars{
+            position: relative;
+            width: 30px;
+            height: 22px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover .bars__container .bar{
+                background: $primary-color;
+                transition: 0.6s;
+            }
+
+            .bars__container{
+                display: none;
+                cursor: pointer;
+    
+                @media screen and (max-width: 630px){
+                    display: flex;
+                }
+    
+                &.open .bar:nth-child(1){
+                    transform: rotate(45deg);
+                }
+    
+                &.open .bar:nth-child(2){
+                    transform: translateX(-50px);
+                    background: transparent;
+                    box-shadow: none;
+                }
+    
+                &.open .bar:nth-child(3){
+                    transform: rotate(-45deg);
+                }
+    
+                .bar{
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    background: #fff;
+                    transition: all .5s ease-in-out;
+    
+                    &:nth-child(1){
+                        transform: translateY(-10px);
+                    }
+    
+                    &:nth-child(3){
+                        transform: translateY(10px);
+                    }
+                }
+            }
+        }
     }
 }

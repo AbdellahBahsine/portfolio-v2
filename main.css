@@ -43,6 +43,8 @@ body {
 }
 
 header {
+  position: relative;
+  z-index: 3;
   background: #2F4858;
   height: 70px;
 }
@@ -54,8 +56,59 @@ header .header__inner {
   justify-content: space-between;
   align-items: center;
 }
+header .header__inner .bars {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+header .header__inner .bars:hover .bars__container .bar {
+  background: #518071;
+  transition: 0.6s;
+}
+header .header__inner .bars .bars__container {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 630px) {
+  header .header__inner .bars .bars__container {
+    display: flex;
+  }
+}
+header .header__inner .bars .bars__container.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+header .header__inner .bars .bars__container.open .bar:nth-child(2) {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+header .header__inner .bars .bars__container.open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+header .header__inner .bars .bars__container .bar {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+header .header__inner .bars .bars__container .bar:nth-child(1) {
+  transform: translateY(-10px);
+}
+header .header__inner .bars .bars__container .bar:nth-child(3) {
+  transform: translateY(10px);
+}
 
-nav .nav__link {
+@media screen and (max-width: 630px) {
+  .nav {
+    display: none;
+  }
+}
+.nav .nav__link {
   font-family: "Assistant", sans-serif;
   font-weight: 300;
   margin-left: 25px;
@@ -63,7 +116,37 @@ nav .nav__link {
   font-size: 20px;
   text-transform: uppercase;
 }
-nav .nav__link:hover {
+.nav .nav__link:hover {
+  color: #518071;
+  transition: 0.8s;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: #253a47;
+  padding-top: 40px;
+}
+.mobile-menu.open {
+  left: 0;
+  transition: 0.8s;
+}
+.mobile-menu .nav__link {
+  font-family: "Assistant", sans-serif;
+  font-weight: 300;
+  margin: 25px;
+  color: #fff;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.mobile-menu .nav__link:hover {
   color: #518071;
   transition: 0.8s;
 }

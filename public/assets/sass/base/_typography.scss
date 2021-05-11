@@ -1,0 +1,17 @@
+body{
+    font-family: $assistant-font;
+    font-size: $default-font-size;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: $black-color; 
+}
+
+.title{
+    font-family: $space-mono-font;
+    font-size: $title-font-size;
+    font-weight: 400;
+
+    span{
+        color: $primary-color;
+    }
+}

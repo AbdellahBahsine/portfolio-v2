@@ -65,6 +65,8 @@ const close = document.querySelectorAll('#close')
 for(let i = 0; i < close.length; i++){
   close[i].addEventListener('click', () => {
     cardContent[i].classList.remove('show')
+    cardContentContainer[i].classList.remove('show')
+    cardContent[i].classList.remove('show')
   })
 }
 

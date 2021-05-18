@@ -8,6 +8,7 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
 
             .about__title{
                 margin-top: 60px;
@@ -90,34 +91,36 @@ main{
                     overflow: hidden;
 
                     &:hover .card__overlay{
-                        background: $light-green;
-                        top: 0;
-                        transition: 0.6s;
+                        opacity: .8;
+                        transition: all 0.4s ease-in-out 0s;
                     }
 
                     .card__overlay{
-                        content: '';
                         position: absolute;
-                        top: -100%;
+                        top: 0;
                         left: 0;
                         height: 100%;
                         width: 100%;
-                        background: transparent;
+                        background: $secondary-color;
+                        opacity: 0;
+
+                        .plus__icon{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 40px;
+                            color: $white-color;
+                            z-index: 3;
+                            cursor: pointer;
+                        }
                     }
 
                     img{
-                        width: 100%;
-                    }
-
-                    .plus__icon{
                         position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 40px;
-                        color: $black-color;
-                        z-index: 3;
-                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
                     }
                 }
 
@@ -144,6 +147,10 @@ main{
                         height: 100%;
                         display: flex;
 
+                        @media screen and (max-width: 912px){
+                            flex-direction: column;
+                        }
+
                         &.show{
                             top: 0;
                             transition: 0.8s;
@@ -154,6 +161,10 @@ main{
                             height: 100%;
                             background: $gray-color;
                             padding-left: 25px;
+
+                            @media screen and (max-width: 912px){
+                                width: 100%;
+                            }
 
                             .close{
                                 position: absolute;
@@ -201,12 +212,22 @@ main{
                             -ms-overflow-style: none;
                             scrollbar-width: none;
 
+                            @media screen and (max-width: 912px){
+                                width: 100%;
+                                padding: 50px 0 25px 0;
+                            }
+
                             &::-webkit-scrollbar {
                                 display: none;
                             }
 
                             img{
                                 width: 90%;
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                                @media screen and (max-width: 912px){
+                                    width: 88%;
+                                }
                             }
                         }
                     }
@@ -228,17 +249,28 @@ main{
             .cards{
                 margin: 35px 0;
 
+                .card:nth-child(1) .card__image{
+                    background-image: url(https://miro.medium.com/max/700/1*WsR2pvcL7A0JfP8nLTCDuQ.jpeg);
+                }
+
+                .card:nth-child(2) .card__image{
+                    background-image: url(https://miro.medium.com/max/700/1*Ea5oN7sXbBpxSv0542Tdvw.jpeg);
+                }
+
+                .card:nth-child(3) .card__image{
+                    background-image: url(https://miro.medium.com/max/700/1*L_gJuNAiKE5rV3c7ZEx0FQ.jpeg);
+                }
+
                 .card{
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                    height: auto;
 
                     .card__image{
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
                         width: 100%;
                         height: 250px;
-
-                        img{
-                            width: 100%;
-                        }
+                        overflow: hidden;
                     }
 
                     .card__content{

@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdellah Bahsine | Front End Developer Portfolio</title>
 
-    <link rel="icon" href="assets/images/blue__logo.png" type="image/icon type">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
-<body id="home">
+<body>
     <header>
         <div class="header__inner">
-            <img src="assets/images/logo.png" alt="logo">
+            <img src="assets/images/logo.svg" alt="">
             <nav class="nav">
-                <a href="/" class="nav__link">Home</a>
-                <a href="/work.html" class="nav__link">My Work</a>
+                <a href="#home" class="nav__link">Home</a>
+                <a href="#" class="nav__link">My Work</a>
                 <a href="#about" class="nav__link">About</a>
                 <a href="#contact" class="nav__link">Contact</a>
                 <a href="#" class="nav__link">Resume</a>
@@ -40,37 +39,16 @@
         <a href="#" class="nav__link">Contact</a>
         <a href="#" class="nav__link">Resume</a>
     </nav>
-
+    
     <main>
-        <section id="about" class="about">
-            <div class="about__inner">
-                <h1 class="about__title title">My name is <span id="typeText"></span></h1>
-                <div class="picture">
-                    <img src="assets/images/about_image.jpg" alt="about_image">
-                </div>
-
-                <div class="socials">
-                    <a class="social" href="https://www.linkedin.com/in/abdellah-bahsine-5589841ba/?originalSubdomain=ma" target="_blank"><i class="fab fa-linkedin-in"></i></a> |
-                    <a class="social" href="https://github.com/Paylo01" target="_blank"><i class="fab fa-github"></i></a> |
-                    <a class="social" href="#"><i class="fab fa-twitter"></i></a> |
-                    <a class="social" href="https://medium.com/abdellah-bahsine/latest"><i class="fab fa-medium-m"></i></a> |
-                    <a class="social" href="mailto:  Abdellah.Bahsine01@gmail.com"><i class="fas fa-envelope"></i></a> 
-                </div>
-
-                <p class="about__text">I'm a self-taught developer. My favorite JavaScript framework is React JS. I'm always learning new stuff related to web development. I love solving problems and I'm passionate about coding.</p><br /><p class="about__text"><span>My skill set include:</span></p>
-                <p class="about__text"><strong>Primary Experience:</strong> HTML - Css - JavaScript - React - Redux - Sass - Bootstrap</p>
-                <p class="about__text"><strong>Secondary Experience:</strong> Node.js - Express.js - MongoDB - Mongoosejs</p>
-            </div>
-        </section>
-
-        <section id="work" class="work">
+        <section id="workpage" class="workpage">
             <div class="work__inner">
                 <h2 class="work__title title">My <span>Work</span></h2>
                 <div class="cards">
                     <div class="card">
                         <img src="assets/images/shark-store.png" alt="shark-store">
                         <div class="card__overlay fade">
-                            <i id="work-btn" class="fas fa-plus plus__icon"></i>
+                            <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
                         </div>
                     </div>
 
@@ -97,7 +75,7 @@
                     <div class="card">
                         <img src="assets/images/shark-store.png" alt="shark-store">
                         <div class="card__overlay fade">
-                            <i id="work-btn" class="fas fa-plus plus__icon"></i>
+                            <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
                         </div>
                     </div>
 
@@ -124,7 +102,7 @@
                     <div class="card">
                         <img src="assets/images/shark-store.png" alt="shark-store">
                         <div class="card__overlay fade">
-                            <i id="work-btn" class="fas fa-plus plus__icon"></i>
+                            <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
                         </div>
                     </div>
 
@@ -149,51 +127,6 @@
                     </div>
                     
                 </div>
-                <a href="#"><button class="button primary">See More</button></a>
-            </div>
-        </section>
-
-        <section id="blogs" class="blogs">
-            <div class="blogs__inner">
-                <h2 class="blogs__title title">Bl<span>ogs</span></h2>
-                <div class="cards">
-                    <div class="card">
-                        <div class="card__image"></div>
-                        <div class="card__content">
-                            <h3 class="card__title">My top 3 favorite higher-order functions In JavaScript</h3>
-                            <p class="card__text">Learn how to create a responsive header. Understanding how to create responsive websites is essential as a developer.</p>
-                            <a href="#"><button class="button secondary">Learn More</button></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image"></div>
-                        <div class="card__content">
-                            <h3 class="card__title">How to create a responsive header using HTML/CSS and JavaScript</h3>
-                            <p class="card__text">Learn how to create a responsive header. Understanding how to create responsive websites is essential as a developer.</p>
-                            <a href="#"><button class="button secondary">Learn More</button></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__image"></div>
-                        <div class="card__content">
-                            <h3 class="card__title">Understand variables scope in JavaScript</h3>
-                            <p class="card__text">Learn how to create a responsive header. Understanding how to create responsive websites is essential as a developer.</p>
-                            <a href="#"><button class="button secondary">Learn More</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="contact__inner">
-                <h2 class="contact__title title">Get In <span>Touch</span></h2>
-                <form id="contact__form" action="" method="POST">
-                    <input type="text" placeholder="Name" name="name" id="name" />
-                    <input type="email" placeholder="Email Address" name="email" id="email" />
-                    <textarea placeholder="Message" name="message" id="message"></textarea>
-                    <input type="submit" name="submit" value="Submit" id="submit" class="button primary">
-                </form>
             </div>
         </section>
     </main>

@@ -70,35 +70,35 @@ for(let i = 0; i < close.length; i++){
   })
 }
 
-const contactForm = document.getElementById('contact__form');
+// const contactForm = document.getElementById('contact__form');
 
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault()
+// contactForm.addEventListener('submit', (e) => {
+//   e.preventDefault()
 
-  let name = document.getElementById('name')
-  let email = document.getElementById('email')
-  let message = document.getElementById('message')
+//   let name = document.getElementById('name')
+//   let email = document.getElementById('email')
+//   let message = document.getElementById('message')
 
-  let formData = {
-    name: name.value, 
-    email: email.value, 
-    message: message.value
-  }
+//   let formData = {
+//     name: name.value, 
+//     email: email.value, 
+//     message: message.value
+//   }
 
-  let xhr = new XMLHttpRequest()
-  xhr.open('POST', '/')
-  xhr.setRequestHeader('content-type', 'application/json')
-  xhr.onload = function(){
-    console.log(xhr.responseText)
-    if(xhr.responseText === 'success'){
-      alert('Email Sent!')
-      name.value = ""
-      email.value = ""
-      message.value = ""
-    } else{
-      alert('Something went wrong!')
-    }
-  }
+//   let xhr = new XMLHttpRequest()
+//   xhr.open('POST', '/')
+//   xhr.setRequestHeader('content-type', 'application/json')
+//   xhr.onload = function(){
+//     console.log(xhr.responseText)
+//     if(xhr.responseText === 'success'){
+//       alert('Email Sent!')
+//       name.value = ""
+//       email.value = ""
+//       message.value = ""
+//     } else{
+//       alert('Something went wrong!')
+//     }
+//   }
 
-  xhr.send(JSON.stringify(formData))
-})
+//   xhr.send(JSON.stringify(formData))
+// })

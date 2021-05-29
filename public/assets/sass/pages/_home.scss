@@ -87,7 +87,7 @@ main{
 
                 .card{
                     position: relative;
-                    height: 350px;
+                    height: 300px;
                     overflow: hidden;
 
                     &:hover .card__overlay{
@@ -114,6 +114,15 @@ main{
                             z-index: 3;
                             cursor: pointer;
                         }
+                    }
+
+                    .image{
+                        background-image: url(../../assets/images/myTasks.png);
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
                     }
 
                     img{
@@ -250,7 +259,7 @@ main{
                 margin: 35px 0;
 
                 .card:nth-child(1) .card__image{
-                    background-image: url(https://miro.medium.com/max/700/1*WsR2pvcL7A0JfP8nLTCDuQ.jpeg);
+                    background-image: url(https://miro.medium.com/max/640/1*YW0DH8PL2HL7-4O5rFaGDw.jpeg);
                 }
 
                 .card:nth-child(2) .card__image{
@@ -258,7 +267,7 @@ main{
                 }
 
                 .card:nth-child(3) .card__image{
-                    background-image: url(https://miro.medium.com/max/700/1*L_gJuNAiKE5rV3c7ZEx0FQ.jpeg);
+                    background-image: url(https://miro.medium.com/max/700/1*uEImESJuQA-lS76C5JrOag.jpeg);
                 }
 
                 .card{

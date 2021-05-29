@@ -156,7 +156,7 @@ header .header__inner {
   align-items: center;
 }
 header .header__inner img {
-  width: 26px;
+  height: 60%;
 }
 header .header__inner .bars {
   position: relative;
@@ -322,7 +322,7 @@ main .work .work__inner .cards {
 }
 main .work .work__inner .cards .card {
   position: relative;
-  height: 350px;
+  height: 300px;
   overflow: hidden;
 }
 main .work .work__inner .cards .card:hover .card__overlay {
@@ -347,6 +347,14 @@ main .work .work__inner .cards .card .card__overlay .plus__icon {
   color: #fff;
   z-index: 3;
   cursor: pointer;
+}
+main .work .work__inner .cards .card .image {
+  background-image: url(../../assets/images/myTasks.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 main .work .work__inner .cards .card img {
   position: absolute;
@@ -468,13 +476,13 @@ main .blogs .blogs__inner .cards {
   margin: 35px 0;
 }
 main .blogs .blogs__inner .cards .card:nth-child(1) .card__image {
-  background-image: url(https://miro.medium.com/max/700/1*WsR2pvcL7A0JfP8nLTCDuQ.jpeg);
+  background-image: url(https://miro.medium.com/max/640/1*YW0DH8PL2HL7-4O5rFaGDw.jpeg);
 }
 main .blogs .blogs__inner .cards .card:nth-child(2) .card__image {
   background-image: url(https://miro.medium.com/max/700/1*Ea5oN7sXbBpxSv0542Tdvw.jpeg);
 }
 main .blogs .blogs__inner .cards .card:nth-child(3) .card__image {
-  background-image: url(https://miro.medium.com/max/700/1*L_gJuNAiKE5rV3c7ZEx0FQ.jpeg);
+  background-image: url(https://miro.medium.com/max/700/1*uEImESJuQA-lS76C5JrOag.jpeg);
 }
 main .blogs .blogs__inner .cards .card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

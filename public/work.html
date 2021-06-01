@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdellah Bahsine | Front End Developer Portfolio</title>
 
+    <link rel="icon" href="assets/images/logo.png" type="image/icon type">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Space+Mono&display=swap" rel="stylesheet">
@@ -15,10 +16,10 @@
         <div class="header__inner">
             <img src="assets/images/logo.svg" alt="">
             <nav class="nav">
-                <a href="#home" class="nav__link">Home</a>
+                <a href="index.html" class="nav__link">Home</a>
                 <a href="#" class="nav__link">My Work</a>
-                <a href="#about" class="nav__link">About</a>
-                <a href="#contact" class="nav__link">Contact</a>
+                <a href="index.html" class="nav__link">About</a>
+                <a href="index.html" class="nav__link">Contact</a>
                 <a href="#" class="nav__link">Resume</a>
             </nav>
 
@@ -33,10 +34,10 @@
     </header>
 
     <nav id="mobile-menu" class="mobile-menu">
-        <a href="#" class="nav__link">Home</a>
+        <a href="index.html" class="nav__link">Home</a>
         <a href="#" class="nav__link">My Work</a>
-        <a href="#" class="nav__link">About</a>
-        <a href="#" class="nav__link">Contact</a>
+        <a href="index.html" class="nav__link">About</a>
+        <a href="index.html" class="nav__link">Contact</a>
         <a href="#" class="nav__link">Resume</a>
     </nav>
     
@@ -46,9 +47,9 @@
                 <h2 class="work__title title">My <span>Work</span></h2>
                 <div class="cards">
                     <div class="card">
-                        <img src="assets/images/shark-store.png" alt="shark-store">
+                        <img class="logo-background" src="assets/images/shark-store-logo.png" alt="shark-store-logo">
                         <div class="card__overlay fade">
-                            <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
+                            <i id="work-btn" class="fas fa-plus plus__icon"></i>
                         </div>
                     </div>
 
@@ -67,6 +68,44 @@
                                     <button class="tool">Firebase</button>
                                     <button class="tool">Styled Components</button>
                                     <button class="tool">Stripe</button>
+                                </div>
+                                <p>Shark store is an e-commerce application. The store includes men  clothes, women clothes and sneakers. I only displayed the "trending" items in the homepage, and all the other items are in the shop page. You can add items to cart and go to checkout page and even use a fake payment card to see that stripe works. <br /> <br />
+                                I created this application using React JS and firebase. I used Redux and Redux toolkit to manage state in the application, and I stored items in the localStorage. </p>
+                                <div class="links">
+                                    <a href="http://shark-store.netlify.com/" target="_blank"><i class="fas fa-desktop"></i> Preview</a>
+                                    <a href="https://github.com/AbdellahBahsine/shark-store" target="_blank"><i class="fas fa-file-code"></i> Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="logo-background" src="assets/images/mytasks-logo.png" alt="mytasks-logo">
+                        <div class="card__overlay fade">
+                            <i id="work-btn" class="fas fa-plus plus__icon"></i>
+                        </div>
+                    </div>
+
+                    <div id="card-content" class="card__content">
+                        <div id="card-content-container" class="card__content__container">
+                            <div class="view">
+                                <img src="assets/images/myTasks.png" alt="mytasks-app">
+                            </div>
+
+                            <div class="details">
+                                <i id="close" class="fas fa-times close"></i>
+                                <h3 class="card__title">myTasks</h3>
+                                <div class="tools">
+                                    <button class="tool">React</button>
+                                    <button class="tool">Express JS</button>
+                                    <button class="tool">Mongoose</button>
+                                    <button class="tool">JWT</button>
+                                </div>
+                                <p>This is a tasks management application that you can use to create tasks, update them and also delete them, basically a CRUD application. To create new tasks you only need to login to your account or create a new one and go to your tasks page and start creating tasks. The tasks that you create are stored in the database and you can access them whenever you want.<br /> <br />
+                                I created this application with React JS in the front-end and express and mongoose in the back-end. To secure the users information I used cookies to store tokens, and jsonwebtoken to generate them. I also used bcrypt to hash the password. </p>
+                                <div class="links">
+                                    <a href="https://my-tasks-application.herokuapp.com/" target="_blank"><i class="fas fa-desktop"></i> Preview</a>
+                                    <a href="https://github.com/AbdellahBahsine/myTasks" target="_blank"><i class="fas fa-file-code"></i> Github</a>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +139,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="assets/images/shark-store.png" alt="shark-store">
+                        <img class="logo-background" src="assets/images/logo.png" alt="portfolio">
                         <div class="card__overlay fade">
                             <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
                         </div>
@@ -109,18 +148,83 @@
                     <div id="card-content" class="card__content">
                         <div id="card-content-container" class="card__content__container">
                             <div class="view">
-                                <img src="assets/images/shark-store.png" alt="shark-store">
+                                <img src="assets/images/my-portfolio.png" alt="my-portfolio">
                             </div>
 
                             <div class="details">
                                 <i id="close" class="fas fa-times close"></i>
-                                <h3 class="card__title">Shark Store - E-commerce Website</h3>
+                                <h3 class="card__title">My Own Portfolio</h3>
                                 <div class="tools">
-                                    <button class="tool">React</button>
-                                    <button class="tool">Redux</button>
-                                    <button class="tool">Firebase</button>
-                                    <button class="tool">Styled Components</button>
-                                    <button class="tool">Stripe</button>
+                                    <button class="tool">HTML</button>
+                                    <button class="tool">Sass</button>
+                                    <button class="tool">JavaScript</button>
+                                    <button class="tool">Form Spree</button>
+                                </div>
+                                <p>I'm the one who designed and coded my own portfolio from scratch, and it's fully responsive. This is my 3rd version of my website. It's very simple and contains all the essential pieces a portfolio needs to have. <br><br>
+                                I was trying to create the contact form with nodemailer but discoverd that shared hosts, or at least the one I used, don't allow for node js in the backend. That is why I used formspree to create the form.</p>
+                                <div class="links">
+                                    <a href="https://abdellah-bahsine.com/" target="_blank"><i class="fas fa-desktop"></i> Preview</a>
+                                    <a href="https://github.com/AbdellahBahsine/portfolio-v2" target="_blank"><i class="fas fa-file-code"></i> Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/quotes-template.png" alt="quotes-template">
+                        <div class="card__overlay fade">
+                            <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
+                        </div>
+                    </div>
+
+                    <div id="card-content" class="card__content">
+                        <div id="card-content-container" class="card__content__container">
+                            <div class="view">
+                                <img src="assets/images/quotes-template.png" alt="quotes-template">
+                            </div>
+
+                            <div class="details">
+                                <i id="close" class="fas fa-times close"></i>
+                                <h3 class="card__title">Quotes template</h3>
+                                <div class="tools">
+                                    <button class="tool">HTML</button>
+                                    <button class="tool">Sass</button>
+                                    <button class="tool">JavaScript</button>
+                                </div>
+                                <p>Quotes is a website that I converted from PSD to code, It's also responsive.</p>
+                                <div class="links">
+                                    <a href="https://quotes-template.netlify.app/" target="_blank"><i class="fas fa-desktop"></i> Preview</a>
+                                    <a href="https://github.com/AbdellahBahsine/quotes-template" target="_blank"><i class="fas fa-file-code"></i> Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/agency-template.png" alt="agency-template">
+                        <div class="card__overlay fade">
+                            <i id="work-btn" class="fas fa-plus plus__icon fade"></i>
+                        </div>
+                    </div>
+
+                    <div id="card-content" class="card__content">
+                        <div id="card-content-container" class="card__content__container">
+                            <div class="view">
+                                <img src="assets/images/agency-template.png" alt="agency-template">
+                            </div>
+
+                            <div class="details">
+                                <i id="close" class="fas fa-times close"></i>
+                                <h3 class="card__title">Agency template</h3>
+                                <div class="tools">
+                                    <button class="tool">HTML</button>
+                                    <button class="tool">Sass</button>
+                                    <button class="tool">JavaScript</button>
+                                </div>
+                                <p>This is a template that I converted from PSD to code. </p>
+                                <div class="links">
+                                    <a href="https://agency-template-site.netlify.app/" target="_blank"><i class="fas fa-desktop"></i> Preview</a>
+                                    <a href="https://github.com/AbdellahBahsine/agency-template" target="_blank"><i class="fas fa-file-code"></i> Github</a>
                                 </div>
                             </div>
                         </div>

@@ -5,9 +5,6 @@
     .work__inner{
         width: 90%;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
         .cards{
             margin: 35px 0;
@@ -16,37 +13,40 @@
                 position: relative;
                 height: 350px;
                 overflow: hidden;
+                background: $dark-blue;
 
-                &:hover .card__overlay, &:hover .plus__icon{
+                &:hover .card__overlay{
+                    opacity: .8;
+                    transition: all 0.4s ease-in-out 0s;
+                }
 
-                    &.fade {
-                        -webkit-animation-name: fade;
-                        -webkit-animation-duration: 1.5s;
-                        animation-name: fade;
-                        animation-duration: 1.5s;
-                        animation-fill-mode: forwards;  
-                      }
-                      
-                      @-webkit-keyframes fade {
-                        from {opacity: 0}
-                        to {opacity: 1}
-                      }
-                      
-                      @keyframes fade {
-                        from {opacity: 0}
-                        to {opacity: 1}
-                      }
+                .logo-background{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 40%;
                 }
 
                 .card__overlay{
-                    content: '';
                     position: absolute;
                     top: 0;
                     left: 0;
                     height: 100%;
                     width: 100%;
-                    background: $light-green;
+                    background: $secondary-color;
                     opacity: 0;
+
+                    .plus__icon{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 40px;
+                        color: $white-color;
+                        z-index: 3;
+                        cursor: pointer;
+                    }
                 }
 
                 img{
@@ -54,18 +54,6 @@
                     top: 0;
                     left: 0;
                     width: 100%;
-                }
-
-                .plus__icon{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 40px;
-                    color: $secondary-color;
-                    z-index: 3;
-                    opacity: 0;
-                    cursor: pointer;
                 }
             }
 
@@ -118,7 +106,7 @@
                         }
 
                         .tools{
-                            margin-top: 10px;
+                            margin: 16px 0;
 
                             .tool{
                                 padding: 8px 16px;
@@ -133,6 +121,29 @@
                                     background: $secondary-color;
                                     color: $white-color;
                                     transition: 0.6s;
+                                }
+                            }
+                        }
+
+                        .links{
+                            margin: 15px 0;
+                            display: flex;
+                            flex-direction: column;
+
+                            a:first-child{
+                                margin-bottom: 8px;
+                            }
+
+                            a{
+                                color: $primary-color;
+
+                                &:hover{
+                                    color: $dark-green;
+                                    transition: 0.8s;
+                                }
+
+                                i{
+                                    margin-right: 10px;
                                 }
                             }
                         }

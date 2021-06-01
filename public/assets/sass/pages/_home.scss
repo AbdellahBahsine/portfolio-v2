@@ -43,7 +43,6 @@ main{
             }
 
             .socials{
-                margin-bottom: 25px;
 
                 .social{
                     font-size: 18px;
@@ -55,6 +54,13 @@ main{
                         transition: 0.6s;
                     }
                 }
+            }
+
+            .line{
+                width: 200px;
+                height: 1px;
+                background: $secondary-color;
+                margin: 25px 0;
             }
 
             .about__text{
@@ -89,10 +95,19 @@ main{
                     position: relative;
                     height: 300px;
                     overflow: hidden;
+                    background: $dark-blue;
 
                     &:hover .card__overlay{
                         opacity: .8;
                         transition: all 0.4s ease-in-out 0s;
+                    }
+
+                    .logo-background{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 40%;
                     }
 
                     .card__overlay{
@@ -114,15 +129,6 @@ main{
                             z-index: 3;
                             cursor: pointer;
                         }
-                    }
-
-                    .image{
-                        background-image: url(../../assets/images/myTasks.png);
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
                     }
 
                     img{
@@ -169,7 +175,7 @@ main{
                             width: 45%;
                             height: 100%;
                             background: $gray-color;
-                            padding-left: 25px;
+                            padding: 0 25px;
 
                             @media screen and (max-width: 912px){
                                 width: 100%;
@@ -190,7 +196,7 @@ main{
                             }
 
                             .tools{
-                                margin-top: 10px;
+                                margin: 16px 0;
 
                                 .tool{
                                     padding: 8px 16px;
@@ -205,6 +211,29 @@ main{
                                         background: $secondary-color;
                                         color: $white-color;
                                         transition: 0.6s;
+                                    }
+                                }
+                            }
+
+                            .links{
+                                margin: 15px 0;
+                                display: flex;
+                                flex-direction: column;
+
+                                a:first-child{
+                                    margin-bottom: 8px;
+                                }
+
+                                a{
+                                    color: $primary-color;
+
+                                    &:hover{
+                                        color: $dark-green;
+                                        transition: 0.8s;
+                                    }
+
+                                    i{
+                                        margin-right: 10px;
                                     }
                                 }
                             }

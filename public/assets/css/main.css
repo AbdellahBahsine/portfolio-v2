@@ -333,12 +333,19 @@ main .work .work__inner .cards .card:hover .card__overlay {
   opacity: 0.8;
   transition: all 0.4s ease-in-out 0s;
 }
-main .work .work__inner .cards .card .logo-background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
+main .work .work__inner .cards .card .bg__image__container {
+  width: 100%;
+  height: 100%;
+}
+main .work .work__inner .cards .card .bg__image__container .bg__image {
+  background-image: url(../images/myTasks.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 0%;
+  transform: scale(1.4);
 }
 main .work .work__inner .cards .card .card__overlay {
   position: absolute;
@@ -559,12 +566,19 @@ main .contact .contact__inner {
   opacity: 0.8;
   transition: all 0.4s ease-in-out 0s;
 }
-.workpage .work__inner .cards .card .logo-background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
+.workpage .work__inner .cards .card .bg__image__container {
+  width: 100%;
+  height: 100%;
+}
+.workpage .work__inner .cards .card .bg__image__container .bg__image {
+  background-image: url(../images/myTasks.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 0%;
+  transform: scale(1.2);
 }
 .workpage .work__inner .cards .card .card__overlay {
   position: absolute;
